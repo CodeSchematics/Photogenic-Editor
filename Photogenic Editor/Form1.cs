@@ -234,7 +234,7 @@ namespace Photogenic_Editor
             else
             {
                 Image image = pictureBox1.Image;
-                Bitmap bmpInverted = new Bitmap(image.Width, image.Height);
+                Bitmap bmpAltered = new Bitmap(image.Width, image.Height);
 
                 ImageAttributes attributes = new ImageAttributes();
 
@@ -254,13 +254,13 @@ namespace Photogenic_Editor
                     new float[]{0, 0, 0, 0, 1}
                 });
                 attributes.SetColorMatrix(cmPicture);
-                Graphics graphics = Graphics.FromImage(bmpInverted);
+                Graphics graphics = Graphics.FromImage(bmpAltered);
 
                 graphics.DrawImage(image, new Rectangle(0, 0, image.Width, image.Height), 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
                 
                 //Release all resources used by this Graphics.
                 graphics.Dispose();
-                pictureBox1.Image = bmpInverted;
+                pictureBox1.Image = bmpAltered;
             }
         }
 
@@ -274,7 +274,7 @@ namespace Photogenic_Editor
             else
             {
                 Image image = pictureBox1.Image;
-                Bitmap bmpInverted = new Bitmap(image.Width, image.Height);
+                Bitmap bmpAltered = new Bitmap(image.Width, image.Height);
 
                 ImageAttributes attributes = new ImageAttributes();
 
@@ -287,13 +287,13 @@ namespace Photogenic_Editor
                     new float[]{0.40f, 0, 0, 0, 1}
                 });
                 attributes.SetColorMatrix(cmPicture);
-                Graphics graphics = Graphics.FromImage(bmpInverted);
+                Graphics graphics = Graphics.FromImage(bmpAltered);
 
                 graphics.DrawImage(image, new Rectangle(0, 0, image.Width, image.Height), 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
 
                 //Release all resources used by this Graphics.
                 graphics.Dispose();
-                pictureBox1.Image = bmpInverted;
+                pictureBox1.Image = bmpAltered;
             }
         }
 
@@ -308,7 +308,7 @@ namespace Photogenic_Editor
             {
 
                 Image image = pictureBox1.Image;
-                Bitmap bmpInverted = new Bitmap(image.Width, image.Height);
+                Bitmap bmpAltered = new Bitmap(image.Width, image.Height);
                 
                 //ImageAttributes change the attribute of images
                 ImageAttributes attributes = new ImageAttributes();                
@@ -327,12 +327,12 @@ namespace Photogenic_Editor
                     new float[]{ 0, 0, 0, 0, 1}
                 });
                 attributes.SetColorMatrix(cmPicture);
-                Graphics graphics = Graphics.FromImage(bmpInverted);
+                Graphics graphics = Graphics.FromImage(bmpAltered);
                 graphics.DrawImage(image, new Rectangle(0, 0, image.Width, image.Height), 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
                 
                 //Release all resources used by this Graphics.
                 graphics.Dispose();
-                pictureBox1.Image = bmpInverted;
+                pictureBox1.Image = bmpAltered;
 
             }
         }
@@ -348,7 +348,7 @@ namespace Photogenic_Editor
             {
 
                 Image image = pictureBox1.Image;
-                Bitmap bmpInverted = new Bitmap(image.Width, image.Height);
+                Bitmap bmpAltered = new Bitmap(image.Width, image.Height);
 
                 //ImageAttributes change the attribute of images
                 ImageAttributes attributes = new ImageAttributes();
@@ -367,12 +367,12 @@ namespace Photogenic_Editor
                     new float[]{0, 0, 0, 0, 1}
                 });
                 attributes.SetColorMatrix(cmPicture);
-                Graphics graphics = Graphics.FromImage(bmpInverted);
+                Graphics graphics = Graphics.FromImage(bmpAltered);
                 graphics.DrawImage(image, new Rectangle(0, 0, image.Width, image.Height), 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
 
                 //Release all resources used by this Graphics.
                 graphics.Dispose();
-                pictureBox1.Image = bmpInverted;
+                pictureBox1.Image = bmpAltered;
 
             }
         }
@@ -388,7 +388,7 @@ namespace Photogenic_Editor
             {
 
                 Image image = pictureBox1.Image;
-                Bitmap bmpInverted = new Bitmap(image.Width, image.Height);
+                Bitmap bmpAltered = new Bitmap(image.Width, image.Height);
 
                 //ImageAttributes change the attribute of images
                 ImageAttributes attributes = new ImageAttributes();
@@ -407,12 +407,12 @@ namespace Photogenic_Editor
                     new float[]{0, 0, 0, 0, 1}
                 });
                 attributes.SetColorMatrix(cmPicture);
-                Graphics graphics = Graphics.FromImage(bmpInverted);
+                Graphics graphics = Graphics.FromImage(bmpAltered);
                 graphics.DrawImage(image, new Rectangle(0, 0, image.Width, image.Height), 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
 
                 //Release all resources used by this Graphics.
                 graphics.Dispose();
-                pictureBox1.Image = bmpInverted;
+                pictureBox1.Image = bmpAltered;
 
             }
         }
@@ -428,7 +428,7 @@ namespace Photogenic_Editor
             {
 
                 Image image = pictureBox1.Image;
-                Bitmap bmpInverted = new Bitmap(image.Width, image.Height);
+                Bitmap bmpAltered = new Bitmap(image.Width, image.Height);
 
                 //ImageAttributes change the attribute of images
                 ImageAttributes attributes = new ImageAttributes();
@@ -447,12 +447,12 @@ namespace Photogenic_Editor
                     new float[]{0.2f, 0.2f, 0.2f, 0, 1}
                 });
                 attributes.SetColorMatrix(cmPicture);
-                Graphics graphics = Graphics.FromImage(bmpInverted);
+                Graphics graphics = Graphics.FromImage(bmpAltered);
                 graphics.DrawImage(image, new Rectangle(0, 0, image.Width, image.Height), 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
 
                 //Release all resources used by this Graphics.
                 graphics.Dispose();
-                pictureBox1.Image = bmpInverted;
+                pictureBox1.Image = bmpAltered;
 
             }
         }
@@ -469,7 +469,7 @@ namespace Photogenic_Editor
             {
 
                 Image image = pictureBox1.Image;
-                Bitmap bmpInverted = new Bitmap(image.Width, image.Height);                                                     
+                Bitmap bmpAltered = new Bitmap(image.Width, image.Height);                                                     
 
                 //ImageAttributes change the attribute of images
                 ImageAttributes attributes = new ImageAttributes();
@@ -488,13 +488,13 @@ namespace Photogenic_Editor
                     new float[]{0, 0, 0, 0, 1}
                 });
                 attributes.SetColorMatrix(cmPicture);
-                Graphics graphics = Graphics.FromImage(bmpInverted);
+                Graphics graphics = Graphics.FromImage(bmpAltered);
 
                 graphics.DrawImage(image, new Rectangle(0, 0, image.Width, image.Height), 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
                 
                 //Release all resources used by this Graphics.
                 graphics.Dispose();
-                pictureBox1.Image = bmpInverted;
+                pictureBox1.Image = bmpAltered;
 
             }
         }
