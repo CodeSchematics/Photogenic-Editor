@@ -24,7 +24,7 @@ namespace Photogenic_Editor
         {
             InitializeComponent();
 
-            pictureBox1.Image = Photogenic_Editor.Properties.Resources.stock;
+            pictureBox1.Image = Properties.Resources.stock;
 
             pictureBox1.MouseDown += new MouseEventHandler(pictureBox1_MouseDown);
             pictureBox1.MouseUp += new MouseEventHandler(pictureBox1_MouseUp);
@@ -41,7 +41,8 @@ namespace Photogenic_Editor
                 Primary.Blue400, Primary.Blue500,
                 Primary.Blue500, Accent.LightBlue200,
                 TextShade.WHITE
-            );
+            );            
+
         }
 
         private void OpenImage()
@@ -59,7 +60,7 @@ namespace Photogenic_Editor
         {
             if (!mIsOpen)
             {
-                // MessageBox.Show("Open an Image and then apply changes
+                MessageBox.Show("Open an Image then apply changes");
             }
             else
             {
@@ -140,7 +141,7 @@ namespace Photogenic_Editor
             Reload();
         }
 
-        // button 2 (filter2) - grayscale
+        // button 2 - grayscale
         private void button2_Click(object sender, EventArgs e)
         {
             Reload(); // reload the image (set to original) so that effect doesn't multiply
@@ -222,6 +223,22 @@ namespace Photogenic_Editor
             SaveImage();
         }
 
+        // Trackbar value change
+        private void trackBar1_ValueChanged(object sender, EventArgs e)
+        {
+            hue();
+        }
+
+        private void trackBar2_ValueChanged(object sender, EventArgs e)
+        {
+            hue();
+        }
+
+        private void trackBar3_ValueChanged(object sender, EventArgs e)
+        {
+            hue();
+        }
+
         // filters
         // TODO: add more filters
 
@@ -257,8 +274,7 @@ namespace Photogenic_Editor
                 Graphics graphics = Graphics.FromImage(bmpAltered);
 
                 graphics.DrawImage(image, new Rectangle(0, 0, image.Width, image.Height), 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
-                
-                //Release all resources used by this Graphics.
+                                
                 graphics.Dispose();
                 pictureBox1.Image = bmpAltered;
             }
@@ -290,8 +306,7 @@ namespace Photogenic_Editor
                 Graphics graphics = Graphics.FromImage(bmpAltered);
 
                 graphics.DrawImage(image, new Rectangle(0, 0, image.Width, image.Height), 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
-
-                //Release all resources used by this Graphics.
+                                
                 graphics.Dispose();
                 pictureBox1.Image = bmpAltered;
             }
@@ -308,11 +323,10 @@ namespace Photogenic_Editor
             {
 
                 Image image = pictureBox1.Image;
-                Bitmap bmpAltered = new Bitmap(image.Width, image.Height);
+                Bitmap bmpAltered = new Bitmap(image.Width, image.Height);                
                 
-                //ImageAttributes change the attribute of images
                 ImageAttributes attributes = new ImageAttributes();                
-                // the color matrix object will change the colors or apply image filter on image
+                
                 ColorMatrix cmPicture = new ColorMatrix(new float[][]
                 {
                     //red
@@ -330,7 +344,6 @@ namespace Photogenic_Editor
                 Graphics graphics = Graphics.FromImage(bmpAltered);
                 graphics.DrawImage(image, new Rectangle(0, 0, image.Width, image.Height), 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
                 
-                //Release all resources used by this Graphics.
                 graphics.Dispose();
                 pictureBox1.Image = bmpAltered;
 
@@ -349,10 +362,9 @@ namespace Photogenic_Editor
 
                 Image image = pictureBox1.Image;
                 Bitmap bmpAltered = new Bitmap(image.Width, image.Height);
-
-                //ImageAttributes change the attribute of images
+                
                 ImageAttributes attributes = new ImageAttributes();
-                // the color matrix object will change the colors or apply image filter on image
+                
                 ColorMatrix cmPicture = new ColorMatrix(new float[][]
                 {
                     //red
@@ -369,8 +381,7 @@ namespace Photogenic_Editor
                 attributes.SetColorMatrix(cmPicture);
                 Graphics graphics = Graphics.FromImage(bmpAltered);
                 graphics.DrawImage(image, new Rectangle(0, 0, image.Width, image.Height), 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
-
-                //Release all resources used by this Graphics.
+                                
                 graphics.Dispose();
                 pictureBox1.Image = bmpAltered;
 
@@ -389,10 +400,9 @@ namespace Photogenic_Editor
 
                 Image image = pictureBox1.Image;
                 Bitmap bmpAltered = new Bitmap(image.Width, image.Height);
-
-                //ImageAttributes change the attribute of images
+                
                 ImageAttributes attributes = new ImageAttributes();
-                // the color matrix object will change the colors or apply image filter on image
+                
                 ColorMatrix cmPicture = new ColorMatrix(new float[][]
                 {
                     //red
@@ -409,8 +419,7 @@ namespace Photogenic_Editor
                 attributes.SetColorMatrix(cmPicture);
                 Graphics graphics = Graphics.FromImage(bmpAltered);
                 graphics.DrawImage(image, new Rectangle(0, 0, image.Width, image.Height), 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
-
-                //Release all resources used by this Graphics.
+                                
                 graphics.Dispose();
                 pictureBox1.Image = bmpAltered;
 
@@ -429,10 +438,9 @@ namespace Photogenic_Editor
 
                 Image image = pictureBox1.Image;
                 Bitmap bmpAltered = new Bitmap(image.Width, image.Height);
-
-                //ImageAttributes change the attribute of images
+                                
                 ImageAttributes attributes = new ImageAttributes();
-                // the color matrix object will change the colors or apply image filter on image
+                
                 ColorMatrix cmPicture = new ColorMatrix(new float[][]
                 {
                     //red
@@ -449,8 +457,7 @@ namespace Photogenic_Editor
                 attributes.SetColorMatrix(cmPicture);
                 Graphics graphics = Graphics.FromImage(bmpAltered);
                 graphics.DrawImage(image, new Rectangle(0, 0, image.Width, image.Height), 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
-
-                //Release all resources used by this Graphics.
+                                
                 graphics.Dispose();
                 pictureBox1.Image = bmpAltered;
 
@@ -470,10 +477,9 @@ namespace Photogenic_Editor
 
                 Image image = pictureBox1.Image;
                 Bitmap bmpAltered = new Bitmap(image.Width, image.Height);                                                     
-
-                //ImageAttributes change the attribute of images
+                                
                 ImageAttributes attributes = new ImageAttributes();
-                // the color matrix object will change the colors or apply image filter on image
+                
                 ColorMatrix cmPicture = new ColorMatrix(new float[][]
                 {
                     //red
@@ -491,29 +497,11 @@ namespace Photogenic_Editor
                 Graphics graphics = Graphics.FromImage(bmpAltered);
 
                 graphics.DrawImage(image, new Rectangle(0, 0, image.Width, image.Height), 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
-                
-                //Release all resources used by this Graphics.
+                                
                 graphics.Dispose();
                 pictureBox1.Image = bmpAltered;
 
             }
-        }
-
-
-        // Trackbar value change listener
-        private void trackBar1_ValueChanged(object sender, EventArgs e)
-        {
-            hue();
-        }
-
-        private void trackBar2_ValueChanged(object sender, EventArgs e)
-        {
-            hue();
-        }
-
-        private void trackBar3_ValueChanged(object sender, EventArgs e)
-        {
-            hue();
         }
 
         // crop ---------------------------------------------------------------------
